@@ -1,0 +1,67 @@
+# ========================
+# Python virtual environment
+# ========================
+venv/
+env/
+.venv/
+
+# ========================
+# Python cache / compiled files
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# Jupyter Notebook
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# Logs
+# ========================
+*.log
+
+# ========================
+# Environment variables
+# ========================
+.env
+.env.*
+
+# ========================
+# OS-specific files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / Editor settings
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# Model files (DL specific – optional but recommended)
+# ========================
+*.h5
+*.pt
+*.pth
+*.ckpt
+
+# ========================
+# Data (if you don't want to push datasets)
+# ========================
+data/
+datasets/
+
+# ========================
+# Training outputs
+# ========================
+runs/
+outputs/
+checkpoints/
+
+# ========================
+# Misc
+# ========================
+*.tmp
