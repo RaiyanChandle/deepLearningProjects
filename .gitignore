@@ -43,7 +43,7 @@ Thumbs.db
 # ========================
 # Model files (DL specific – optional but recommended)
 # ========================
-*.h5
+
 *.pt
 *.pth
 *.ckpt
