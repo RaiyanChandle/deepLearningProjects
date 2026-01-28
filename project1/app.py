@@ -4,19 +4,27 @@ import tensorflow as tf
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pandas as pd
 import pickle
-
+import os 
 # Load the trained model
 model = tf.keras.models.load_model('model.h5')
 
-# Load the encoders and scaler
-with open('le_gender.pkl', 'rb') as file:
-    label_encoder_gender = pickle.load(file)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-with open('ohe_geo.pkl', 'rb') as file:
-    onehot_encoder_geo = pickle.load(file)
+model_path = os.path.join(BASE_DIR, "model.h5")
+gender_path = os.path.join(BASE_DIR, "le_gender.pkl")
+geo_path = os.path.join(BASE_DIR, "ohe_geo.pkl")
+scaler_path = os.path.join(BASE_DIR, "scaler.pkl")
 
-with open('scaler.pkl', 'rb') as file:
-    scaler = pickle.load(file)
+model = tf.keras.models.load_model(model_path)
+
+with open(gender_path, "rb") as f:
+    le_gender = pickle.load(f)
+
+with open(geo_path, "rb") as f:
+    ohe_geo = pickle.load(f)
+
+with open(scaler_path, "rb") as f:
+    scaler = pickle.load(f)
 
 
 ## streamlit app
