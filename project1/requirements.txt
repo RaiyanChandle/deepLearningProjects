@@ -1,8 +1,8 @@
-tensorflow
+streamlit>=1.30.0
+protobuf<5
+tensorflow>=2.15.0
+scikit-learn
 pandas
 numpy
-scikit-learn
-tensorboard
-streamlit
-ipykernel
 matplotlib
+joblib
